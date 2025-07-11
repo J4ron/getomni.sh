@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavbarStore } from "../../stores/navbarStore";
 
 const leftNavItems = [{ label: "About", href: "#about" }];
 const rightNavItems = [
@@ -8,22 +9,25 @@ const rightNavItems = [
 ];
 
 export default function FloatingNav() {
-  const [visible, setVisible] = useState(false);
+  const floatingNavVisible = useNavbarStore((state) => state.floatingNavVisible);
+  const setFloatingNavVisible = useNavbarStore(
+    (state) => state.setFloatingNavVisible
+  );
 
   useEffect(() => {
     function onScroll() {
-      setVisible(window.scrollY > 50);
+      setFloatingNavVisible(window.scrollY > 50);
     }
 
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [setFloatingNavVisible]);
 
   return (
     <AnimatePresence>
-      {visible && (
+      {floatingNavVisible && (
         <>
           {/* Floating Nav */}
           <motion.nav
@@ -81,14 +85,14 @@ export default function FloatingNav() {
             exit={{ opacity: 0, y: 20 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
             className="
-    fixed bottom-18 left-1/2 transform -translate-x-1/2
-    z-40
-    bg-[#0a0a0a] rounded-full p-2 w-12 h-12
-    shadow-2xl
-    flex items-center justify-center
-    cursor-pointer
-    ring-1 ring-white/20 hover:ring-white/40
-  "
+              fixed bottom-18 left-1/2 transform -translate-x-1/2
+              z-40
+              bg-[#0a0a0a] rounded-full p-2 w-12 h-12
+              shadow-2xl
+              flex items-center justify-center
+              cursor-pointer
+              ring-1 ring-white/20 hover:ring-white/40
+            "
           >
             <img
               src="/omniascii.png"

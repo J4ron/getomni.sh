@@ -121,7 +121,7 @@
 
 .grain-overlay {
   z-index: -1;
-  opacity: .02;
+  opacity: .023;
   background-image: url(/selfgrain.gif);
   background-position: 0 0;
   background-size: auto;

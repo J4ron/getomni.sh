@@ -11,7 +11,7 @@ export default function Navbar() {
     <>
       <div  className="h-5"></div>
       <nav
-        className="top-0 z-50 drop-shadow-2xl bg-transparent transition-opacity"
+        className="top-0 z-50 drop-shadow-2xl bg-transparent transition-opacity border-b-2 border-t-2 border-dashed border-white"
         role="navigation"
         aria-label="Main Navigation"
       >

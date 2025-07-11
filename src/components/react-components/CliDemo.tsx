@@ -4,18 +4,18 @@ const CLIDemo = () => {
   const commands = [
     {
       input: 'omni convert document.pdf --to docx',
-      output: '✓ Converted document.docx --document.pdf (2.1s)'
+      output: 'Converted document.docx --document.pdf (2.1s)'
     },
     {
       input: 'omni batch *.mp3 --to wav --quality high',
       output: [
-        '✓ Processing 24 files...',
-        '✓ Batch conversion complete (45.2s)'
+        'Processing 24 files...',
+        'Batch conversion complete (45.2s)'
       ]
     },
     {
       input: 'omni compress assets/ --format webp --size 80%',
-      output: '✓ Compressed 156 images, saved 2.4GB'
+      output: 'Compressed 156 images, saved 2.4GB'
     }
   ];
 
@@ -35,10 +35,10 @@ const CLIDemo = () => {
         Simple CLI Commands
       </h2>
       
-      {/* Terminal Container */}
-      <div className="bg-gray-900 rounded-lg shadow-xl overflow-hidden relative">
+      {/* Terminal Container */} 
+      <div className="bg-[#0A0A0A] shadow-xl overflow-hidden relative rounded-tl-lg rounded-tr-lg">
         {/* Terminal Header */}
-        <div className="bg-gray-800 px-4 py-3 flex items-center">
+        <div className="bg-[#0A0A0A] px-4 py-3 flex items-center border-b border-[#292929] rounded-tl-lg rounded-tr-lg">
           <div className="flex space-x-2">
             <div className="w-3 h-3 bg-red-500 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -53,7 +53,7 @@ const CLIDemo = () => {
             <div key={index} className="mb-4 last:mb-0">
               {/* Command Input */}
               <div className="flex items-start">
-                <span className="text-green-400 mr-2">$</span>
+                <span className="text-green-600 mr-2">$</span>
                 <span className="text-gray-200">{cmd.input}</span>
               </div>
               
@@ -61,13 +61,13 @@ const CLIDemo = () => {
               <div className="mt-1 ml-5">
                 {Array.isArray(cmd.output) ? (
                   cmd.output.map((line, i) => (
-                    <div key={i} className="flex text-green-300">
+                    <div key={i} className="flex text-green-600">
                       <span className="mr-2">✓</span>
                       <span>{line}</span>
                     </div>
                   ))
                 ) : (
-                  <div className="flex text-green-300">
+                  <div className="flex text-green-600">
                     <span className="mr-2">✓</span>
                     <span>{cmd.output}</span>
                   </div>
@@ -79,11 +79,11 @@ const CLIDemo = () => {
       </div>
       
       {/* Footer */}
-      <div className="mt-6 text-center text-gray-600 relative">
+      <div className="mt-4 text-center text-gray-200 relative text-shadow-lg">
         Works on Windows, macOS, and Linux → 
         <a 
           href="#all-commands" 
-          className="text-blue-600 hover:underline ml-1"
+          className="text-gray-100 underline ml-1"
         >
           see all commands
         </a>

@@ -3,29 +3,30 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/react-components/navbar";
 import HeroContent from "../components/react-components/HeroContent";
 import BackgroundCircles from "../components/ui/backgroundcircles";
-import DashedLines from "../components/ui/dashedlines";
 import FloatingNav from "../components/ui/floatingnav";
 import Spacer from "../components/react-components/spacer";
 import CLIDemo from "../components/react-components/CliDemo";
+import DashedLines from "../components/ui/dashedlines";
+import GridOverlay from "../layouts/GridOverlay";
+import Seo from "../components/seo/Seo.astro";
+import SafetyBadges from "../components/ui/SafetyBadge";
+
+const pageTitle = "Omni";
+const pageDescription = "Convert files directly in your terminal. Supports PDF, DOCX, PNG, TXT, and more.";
+
 import "./src/styles/global.css";
 ---
+
+<Seo title={pageTitle} description={pageDescription} />
 
 <Layout>
   <div class="grain-overlay pointer-events-none"></div>
 
   <Navbar client:load />
   <FloatingNav client:load />
-
-
   <BackgroundCircles client:load />
 
-  <div class="absolute top-0 left-0 w-full z-40 pointer-events-none mt-4">
-    <DashedLines orientation="hr" />
-  </div>
-
-  <div class="absolute top-0 left-0 w-full z-40 pointer-events-none mt-25">
-    <DashedLines orientation="hr" />
-  </div>
+  <GridOverlay client:load />
 
   <main class="relative z-30 max-w-full mx-auto px-6 pt-20">
     <HeroContent client:load />
@@ -42,7 +43,11 @@ import "./src/styles/global.css";
       </div>
     </div>
   </main>
+
+  <div class="mt-40">
+    <SafetyBadges client:visible />
+  </div>
   <div class="mt-200">
-	  <CLIDemo />
+    <CLIDemo />
   </div>
 </Layout>

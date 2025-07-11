@@ -1,20 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
 import { useNavbarStore } from "../../stores/navbarStore";
 
 export default function BackgroundCircles() {
   const isSticky = useNavbarStore((state) => state.isSticky);
+  const floatingNavVisible = useNavbarStore((state) => state.floatingNavVisible);
   const controls = useAnimation();
 
   useEffect(() => {
-    controls.start({
-      background: isSticky
-        ? "linear-gradient(180deg, #84cc16 0%, #bef264 50%, #22c55e 100%)" // grün Verlauf sticky
-        : "linear-gradient(180deg, #d946ef 0%, #fda4af 50%, #8b5cf6 100%)", // original pink/lila Verlauf
-      transition: { duration: 1.2, ease: "easeInOut" },
-    });
-  }, [isSticky, controls]);
+  controls.start({
+    background: floatingNavVisible
+    ? "linear-gradient(180deg, #cc1666 0%, #f264be 50%, #c5228f 100%)" 
+    : "linear-gradient(180deg, #d946ef 0%, #fda4af 50%, #8b5cf6 100%)", 
+    transition: { duration: 1.2, ease: "easeInOut" },
+  });
+  }, [isSticky, floatingNavVisible, controls]);
 
   return (
     <>
@@ -26,12 +26,7 @@ export default function BackgroundCircles() {
       <motion.div
         className="absolute top-[550px] right-[-450px] w-[957px] h-[966px] rounded-full opacity-80 blur-3xl -z-20 pointer-events-none"
         style={{ filter: "blur(50px)", willChange: "filter, transform" }}
-        animate={{
-          background: isSticky
-            ? "linear-gradient(225deg, #fde68a 0%, #fb923c 50%, #ef4444 100%)"
-            : "linear-gradient(225deg, #ec4899 0%, #fda4af 50%, #f43f5e 100%)",
-          transition: { duration: 1.2, ease: "easeInOut" },
-        }}
+        animate={controls}
       />
     </>
   );

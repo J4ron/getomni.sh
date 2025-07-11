@@ -3,10 +3,20 @@ import { motion, type Variants, easeOut } from "framer-motion";
 import { AppWindowMac, CreditCard, Shredder } from "lucide-react";
 
 const features = [
-  { icon: <AppWindowMac color="white" width={40} height={40} />, label: "Runs Native with your OS" },
-  { icon: <Shredder color="white" width={40} height={40} />, label: "No limits. Ever." },
-  { icon: <CreditCard color="white" width={40} height={40} />, label: "One-time Payment" },
+  {
+    icon: <AppWindowMac color="white" width={32} height="auto" aria-hidden="true" strokeWidth={1} />,
+    label: "Runs Native with your OS",
+  },
+  {
+    icon: <Shredder color="white" width={32} height="auto" aria-hidden="true" strokeWidth={1} />,
+    label: "No limits. Ever.",
+  },
+  {
+    icon: <CreditCard color="white" width={32} height="auto" aria-hidden="true" strokeWidth={1}/>,
+    label: "One-time Payment",
+  },
 ];
+
 
 const containerVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -41,7 +51,7 @@ export default function Spacer() {
                 whileHover={{ scale: 1.05, originX: 0.5, originY: 0.5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="bg-[#0A0A0A] w-20 h-20 flex items-center justify-center rounded-md shadow-lg">
+                <div className="bg-[#0A0A0A] w-15 h-15 flex items-center justify-center rounded-md shadow-lg">
                   {feature.icon}
                 </div>
                 <h2 className="ml-6 text-lg font-medium text-[#0A0A0A]">{feature.label}</h2>
