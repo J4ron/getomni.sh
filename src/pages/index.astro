@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/react-components/navbar";
+import HeroContent from "../components/react-components/HeroContent";
+import BackgroundCircles from "../components/ui/backgroundcircles";
+import DashedLines from "../components/ui/dashedlines";
+import FloatingNav from "../components/ui/floatingnav";
+import Spacer from "../components/react-components/spacer";
+import CLIDemo from "../components/react-components/CliDemo";
+import "./src/styles/global.css";
+---
+
+<Layout>
+  <div class="grain-overlay pointer-events-none"></div>
+
+  <Navbar client:load />
+  <FloatingNav client:load />
+
+
+  <BackgroundCircles client:load />
+
+  <div class="absolute top-0 left-0 w-full z-40 pointer-events-none mt-4">
+    <DashedLines orientation="hr" />
+  </div>
+
+  <div class="absolute top-0 left-0 w-full z-40 pointer-events-none mt-25">
+    <DashedLines orientation="hr" />
+  </div>
+
+  <main class="relative z-30 max-w-full mx-auto px-6 pt-20">
+    <HeroContent client:load />
+
+    <div class="relative z-30 max-w-full mx-auto px-6 mt-30">
+      <div class="absolute -top-5 left-0 w-full z-40 pointer-events-none">
+        <DashedLines orientation="hr" />
+      </div>
+
+      <Spacer client:load />
+
+      <div class="absolute -bottom-5 left-0 w-full z-40 pointer-events-none">
+        <DashedLines orientation="hr" />
+      </div>
+    </div>
+  </main>
+  <div class="mt-200">
+	  <CLIDemo />
+  </div>
+</Layout>
