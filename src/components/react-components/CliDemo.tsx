@@ -1,4 +1,3 @@
-import React from 'react';
 
 const CLIDemo = () => {
   const commands = [
@@ -32,7 +31,7 @@ const CLIDemo = () => {
       </div>
 
       <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center relative">
-        Simple CLI Commands
+       Your Terminal, Supercharged.
       </h2>
       
       {/* Terminal Container */} 

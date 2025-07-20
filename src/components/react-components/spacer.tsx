@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, type Variants, easeOut } from "framer-motion";
 import { AppWindowMac, CreditCard, Shredder } from "lucide-react";
 

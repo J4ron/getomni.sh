@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavbarStore } from "../../stores/navbarStore";
 
 const leftNavItems = [{ label: "About", href: "#about" }];
 const rightNavItems = [
   { label: "Docs", href: "#docs" },
-  { label: "Get Omni", href: "#get-omni" },
+  { label: "Get Omni", href: "#pricing" },
 ];
 
 export default function FloatingNav() {

@@ -1,17 +1,8 @@
 import { motion } from "framer-motion";
-import { PlusSquare } from "lucide-react";
 import PulsingDot from "../ui/pulsingdot";
 import { Button } from "../ui/button";
 
 export default function AnimatedHeroContent() {
-  const container = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { staggerChildren: 0.15, ease: "easeOut", duration: 0.6 },
-    },
-  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },

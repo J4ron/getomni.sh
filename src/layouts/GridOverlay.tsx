@@ -1,4 +1,3 @@
-import React from 'react';
 import DashedLines from '../components/ui/dashedlines';
 
 export default function GridOverlay() {

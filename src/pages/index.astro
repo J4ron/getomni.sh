@@ -15,6 +15,7 @@ const pageTitle = "Omni";
 const pageDescription = "Convert files directly in your terminal. Supports PDF, DOCX, PNG, TXT, and more.";
 
 import "./src/styles/global.css";
+import Pricing from "@/components/react-components/pricing";
 ---
 
 <Seo title={pageTitle} description={pageDescription} />
@@ -46,6 +47,10 @@ import "./src/styles/global.css";
 
   <div class="mt-40">
     <SafetyBadges client:visible />
+  </div>
+  
+  <div class="mt-40">
+    <Pricing />
   </div>
   <div class="mt-200">
     <CLIDemo />

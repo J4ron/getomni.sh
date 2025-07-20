@@ -3,7 +3,7 @@ export default function Navbar() {
   const navItems = [
     { label: "About", href: "#about" },
     { label: "Docs", href: "#docs" },
-    { label: "Get Omni", href: "#get-omni" },
+    { label: "Get Omni", href: "#pricing" },
   ];
 
 
