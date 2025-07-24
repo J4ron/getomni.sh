@@ -16,6 +16,8 @@ const pageDescription = "Convert files directly in your terminal. Supports PDF, 
 
 import "./src/styles/global.css";
 import Pricing from "@/components/react-components/pricing";
+import Footer from "@/components/react-components/footer";
+import SafetyBento from "@/components/react-components/ConversionTimeline";
 ---
 
 <Seo title={pageTitle} description={pageDescription} />
@@ -50,9 +52,17 @@ import Pricing from "@/components/react-components/pricing";
   </div>
   
   <div class="mt-40">
+    <SafetyBento client:load/>
+  </div>
+
+  <div class="mt-40">
     <Pricing />
   </div>
+
   <div class="mt-200">
-    <CLIDemo />
+    <CLIDemo client:visible/>
+  </div>
+  <div class="mt-40">
+    <Footer client:visible/>
   </div>
 </Layout>

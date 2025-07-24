@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavbarStore } from "../../stores/navbarStore";
 
@@ -14,9 +14,18 @@ export default function FloatingNav() {
     (state) => state.setFloatingNavVisible
   );
 
+  const footerRef = useRef<HTMLElement | null>(null);
+
   useEffect(() => {
+    const footerEl = document.getElementById("footer");
+    footerRef.current = footerEl;
+
     function onScroll() {
-      setFloatingNavVisible(window.scrollY > 50);
+      const footerInView =
+        footerEl &&
+        footerEl.getBoundingClientRect().top <
+          window.innerHeight - 150; // 150 = Abstand zur Bottom-Nav
+      setFloatingNavVisible(window.scrollY > 50 && !footerInView);
     }
 
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -49,7 +58,6 @@ export default function FloatingNav() {
               space-x-12
             "
           >
-            {/* Links links */}
             <div className="flex space-x-8">
               {leftNavItems.map((item) => (
                 <a
@@ -62,7 +70,6 @@ export default function FloatingNav() {
               ))}
             </div>
 
-            {/* Rechts */}
             <div className="flex space-x-8">
               {rightNavItems.map((item) => (
                 <a
@@ -76,7 +83,7 @@ export default function FloatingNav() {
             </div>
           </motion.nav>
 
-          {/* Rundes Logo unten mittig, leicht versetzt */}
+          {/* Center Logo */}
           <motion.a
             href="/"
             aria-label="Omni Home"
