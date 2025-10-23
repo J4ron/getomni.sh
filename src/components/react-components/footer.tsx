@@ -2,7 +2,6 @@ export default function Footer() {
   return (
     <footer id="footer" className="bg-[#0A0A0A] text-gray-400 py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
-        {/* Left: Logo + Description */}
         <div className="md:w-1/2">
           <pre
             className="
@@ -35,9 +34,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Right: Link Sections */}
         <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {/* Product */}
           <div>
             <h3 className="text-white text-sm font-semibold mb-3">Product</h3>
             <ul className="space-y-2 text-sm">
@@ -64,7 +61,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h3 className="text-white text-sm font-semibold mb-3">Company</h3>
             <ul className="space-y-2 text-sm">
@@ -91,7 +87,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <h3 className="text-white text-sm font-semibold mb-3">Legal</h3>
             <ul className="space-y-2 text-sm">
@@ -120,7 +115,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Line */}
       <div className="mt-10 text-center text-xs text-gray-600">
         &copy; {new Date().getFullYear()} Omni. Secure. Offline. Yours.
       </div>
