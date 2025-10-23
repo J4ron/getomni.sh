@@ -1,53 +1,53 @@
-# Omnish
+# 🌌 getomni.sh — The Omni CLI Landing Experience
 
-![Omnish ASCII Logo](public/asciilogo.png)
+![Omni ASCII Logo](public/asciilogo.png)
 
-Welcome to **Omnish**! This project is built with [Astro](https://astro.build/) and features a modern, interactive CLI-inspired web experience.
+A **simulated CLI web experience** built with [Astro](https://astro.build), [React](https://react.dev), [TailwindCSS](https://tailwindcss.com), and [Framer Motion](https://www.framer.com/motion/).  
+This project showcases a **developer-inspired landing page** for the Omni CLI — a local Java-based file conversion tool.
 
-## 🖼️ Mockups & Visuals
+---
 
-| CLI Demo Glow | ASCII Logo | Omnish Icon | Animated Grain |
-|:-------------:|:----------:|:-----------:|:--------------:|
-| ![CLI Demo](public/cliglow.png) | ![ASCII Logo](public/asciilogo.png) | ![Omni ASCII](public/omniascii.png) | ![Self Grain](public/selfgrain.gif) |
+## 🧭 Overview
 
-## 🚀 Project Structure
+`getomni.sh` is the official **landing page** for the Omni CLI — a cross-format file conversion tool built in Java.  
+The website presents Omni’s vision, features, and technology in a **modern, developer-focused** design.  
 
-Your project includes the following folders and files:
+It includes an **interactive CLI showcase section** that visually demonstrates how Omni works, without executing real commands.  
+The focus of this project lies in **design, frontend architecture, and motion experience**, not in backend functionality.
 
-```text
-/
-├── public/
-│   ├── asciilogo.png
-│   ├── cliglow.png
-│   ├── omniascii.png
-│   ├── selfgrain.gif
-│   └── favicon.svg
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── layouts/
-│   ├── lib/
-│   ├── pages/
-│   ├── stores/
-│   └── styles/
-└── package.json
-```
 
-## 🧞 Commands
+🧩 **Purpose:**  
+To demonstrate how to combine **UI design**, **motion effects**, and **frontend architecture** for a product landing page that feels alive.
 
-All commands are run from the root of the project:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## ✨ Features
 
-## 👀 Want to learn more?
+- 🎛️ **Animated CLI Simulation** – Fake terminal commands with dynamic typing effects  
+- 🌗 **ASCII Branding** – Consistent ASCII-based visuals and iconography  
+- 🌀 **Grain & Glow Effects** – Layered motion and texture for depth  
+- ⚡ **Fast Astro Stack** – Static + interactive React islands  
+- 🎨 **Fully Responsive Design** – Optimized for desktop & mobile  
+- 🔧 **Code-Split Components** – Modular structure for scalability  
 
-- [Astro Documentation](https://docs.astro.build)
-- [Omnish Project Wiki](#) <!-- Add your wiki or docs link here -->
-- [Join our Discord](https://astro.build/chat)
+---
+
+## 🧱 Tech Stack
+
+| Category | Technologies |
+|-----------|---------------|
+| Framework | [Astro](https://astro.build), [React](https://react.dev) |
+| Styling | [TailwindCSS](https://tailwindcss.com), [Framer Motion](https://www.framer.com/motion/) |
+| Language | TypeScript |
+| Deployment | Vercel / Netlify |
+| Version Control | Git & GitHub |
+
+---
+
+## 🚀 Run Locally
+
+```bash
+git clone https://github.com/yourusername/getomni.sh.git
+cd getomni.sh
+bun install
+bun run dev
