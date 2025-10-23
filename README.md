@@ -1,4 +1,4 @@
-# 🌌 getomni.sh — The Omni CLI Landing Experience
+# getomni.sh — The Omni CLI Landing Experience
 
 ![Omni ASCII Logo](public/asciilogo.png)
 
