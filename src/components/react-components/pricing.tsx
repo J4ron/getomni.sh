@@ -6,7 +6,7 @@ export default function Pricing() {
   return (
     <section id="pricing" aria-labelledby="pricing-heading">
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+       
         <header className="text-center mb-16">
           <h2
             id="pricing-heading"
@@ -21,7 +21,7 @@ export default function Pricing() {
           </p>
         </header>
 
-        {/* Pricing Plans Grid */}
+      
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {pricingPlans.map((plan, idx) => {
             const rotationClass =
@@ -43,13 +43,13 @@ export default function Pricing() {
                 className={`relative flex flex-col h-full items-stretch ${rotationClass}`}
                 aria-labelledby={`plan-${plan.id}-title`}
               >
-                {/* Gradient Background */}
+               
                 <div
                   className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[101%] h-[101%] -z-10 rounded-sm blur-[10px] opacity-56 pointer-events-none ${gradientColors[idx % gradientColors.length]}`}
                   aria-hidden="true"
                 />
 
-                {/* Pricing Card */}
+              
                 <Card
                   className="flex flex-col h-full bg-[#0F0F0F] rounded-sm shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
@@ -89,7 +89,6 @@ export default function Pricing() {
           })}
         </div>
 
-        {/* Section Footer */}
         <footer className="mt-12 text-center text-sm text-gray-500">
           All plans include free updates and support.
         </footer>
