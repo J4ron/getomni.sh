@@ -50,7 +50,7 @@ useEffect(() => {
   return (
     <div className='mt-16 w-full z-51 pointer-events-none'>
       <div className="max-w-3xl mx-auto p-6 font-sans relative">
-        {/* Background */}
+       
         <div className="absolute inset-0 -z-10 rounded-2xl pointer-events-none">
           <img 
             src="/cliglow.png" 
@@ -70,9 +70,9 @@ useEffect(() => {
 
     </h2>
 
-        {/* Terminal */}
+        
         <div className="bg-[#0A0A0A] shadow-xl overflow-hidden relative rounded-tl-lg rounded-tr-lg ">
-          {/* Header */}
+          
           <div className="bg-[#0A0A0A] px-4 py-3 flex items-center border-b border-[#292929] rounded-tl-lg rounded-tr-lg">
             <div className="flex space-x-2">
               <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -82,7 +82,7 @@ useEffect(() => {
             <div className="text-gray-400 text-sm ml-4">Terminal</div>
           </div>
 
-          {/* Terminal Body */}
+         
           <div className="p-5 font-mono text-sm h-[230px] overflow-y-auto">
             {commands.slice(0, currentCmd).map((cmd, index) => (
               <div key={index} className="mb-4">
@@ -108,7 +108,6 @@ useEffect(() => {
               </div>
             ))}
 
-            {/* Aktuell getippter Befehl */}
             {currentCmd < commands.length && (
               <div className="mb-4">
                 <div className="flex items-start">
@@ -140,7 +139,7 @@ useEffect(() => {
           </div>
         </div>
 
-        {/* Footer */}
+      
         <div className="mt-4 text-center text-gray-200 relative">
           Works on Windows, macOS, and Linux → 
           <a 
